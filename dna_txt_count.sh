@@ -7,7 +7,7 @@ fi
 # Assign the input filename
 filename=$1
 
-# use bioawk to count nucleotides A, C, G, T (case-sensitive)
+# use awk to count nucleotides A, C, G, T (case-sensitive)
 awk '{
     a = g = c = t = 0;
     for (i = 1; i <= length($0); i++) {
