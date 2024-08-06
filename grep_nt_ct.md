@@ -5,7 +5,7 @@ This document tries to explain how to count the occurences of individual nucleot
 
 ## Prerequisites
 
-- Make sure you have grep installed. A bit of terminal knowledge is engouh.
+- Make sure you have grep installed. A bit of terminal knowledge is enough.
 - Open terminal or command prompt.
 - Navigate to the directory where the file is saved.
 
