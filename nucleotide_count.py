@@ -1,11 +1,11 @@
-def count_nucleotides(filename):
+def ct_nt(filename):
     print(f"Processing file: {filename}")  # Debugging line
     if filename.endswith('.fasta') or filename.endswith('.fa'):
-        return count_nucleotides_fasta(filename)
+        return ct_nt_fasta(filename)
     else:
-        return count_nucleotides_text(filename)
+        return ct_nt_text(filename)
 
-def count_nucleotides_text(filename):
+def ct_nt_text(filename):
     with open(filename, 'r') as file:
         data = file.read().replace('\n', '')  # Remove line breaks for counting
         print("Data read from file.")  # Debugging line
@@ -17,7 +17,7 @@ def count_nucleotides_text(filename):
         
         return a_count, c_count, g_count, t_count
 
-def count_nucleotides_fasta(filename):
+def ct_nt_fasta(filename):
     a_count = c_count = g_count = t_count = 0
     
     with open(filename, 'r') as file:
@@ -34,5 +34,5 @@ def count_nucleotides_fasta(filename):
 # Example usage
 if __name__ == "__main__":
     filename = 'CDKN1B_cds.fasta'  # Change the filename to your input file
-    results = count_nucleotides(filename)
+    results = ct_nt(filename)
     print(f'A: {results[0]}, C: {results[1]}, G: {results[2]}, T: {results[3]}')
